@@ -31,8 +31,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ivony.Core">
+      <HintPath>..\..\..\Jumony\Ivony.Html.Parser\bin\Release\Ivony.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ivony.Html">
+      <HintPath>..\..\..\Jumony\Ivony.Html.Parser\bin\Release\Ivony.Html.dll</HintPath>
+    </Reference>
+    <Reference Include="Ivony.Html.Parser">
+      <HintPath>..\..\..\Jumony\Ivony.Html.Parser\bin\Release\Ivony.Html.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="Ivony.Html.Parser.Regulars">
+      <HintPath>..\..\..\Jumony\Ivony.Html.Parser\bin\Release\Ivony.Html.Parser.Regulars.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,11 +55,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="item.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ls\ls\src\ls.Common\ls.Common.csproj">
+      <Project>{f4e6f4dd-e8a6-4451-8356-01ff60a5f3ba}</Project>
+      <Name>ls.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ls\ls\src\System.Extensions\System.Extensions.csproj">
+      <Project>{f1da37e1-b94f-4614-baaa-e6800cf0adde}</Project>
+      <Name>System.Extensions</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
